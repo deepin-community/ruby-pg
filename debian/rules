@@ -1,0 +1,20 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --buildsystem=ruby --with ruby
+
+override_dh_auto_build:
+	ruby ext/errorcodes.rb ext/errorcodes.txt ext/errorcodes.def
+	dh_auto_build
+
+override_dh_installdocs:
+	rdoc --op rdoc --main README.rdoc --title "pg: The Ruby Interface to PostgreSQL" lib/ ext/*.c README.rdoc
+	dh_installdocs
+
+override_dh_installchangelogs:
+	dh_installchangelogs History.rdoc
+
+override_dh_clean:
+	rm -rf rdoc ext/errorcodes.def
+	rm -f pg-${UPSTREAM_VERSION}.gemspec
+	dh_clean

@@ -1,0 +1,30 @@
+Source: ruby-pg
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Dmitry Borodaenko <angdraug@debian.org>,
+           Pirate Praveen <praveen@debian.org>
+Build-Depends: debhelper-compat (= 12),
+               gem2deb (>= 1.0~),
+               libpq-dev,
+               rake-compiler,
+               ruby-hoe
+Standards-Version: 4.5.0
+Homepage: http://bitbucket.org/ged/ruby-pg
+Vcs-Git: https://salsa.debian.org/ruby-team/ruby-pg.git
+Vcs-Browser: https://salsa.debian.org/ruby-team/ruby-pg
+Testsuite: autopkgtest-pkg-ruby
+XS-Ruby-Versions: all
+Rules-Requires-Root: no
+
+Package: ruby-pg
+Architecture: any
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ruby | ruby-interpreter, ${misc:Depends}, ${shlibs:Depends}
+Suggests: doc-base, libjs-jquery
+Breaks: gitlab (<< 11.8~), ruby-activerecord-import (<< 0.28.2-3)
+Description: PostgreSQL interface for Ruby
+ ruby-pg module allows Ruby programs to interface with the PostgreSQL
+ database engine.
+ .
+ It supports the functions defined in libpq library.

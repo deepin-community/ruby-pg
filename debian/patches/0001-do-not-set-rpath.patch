@@ -1,0 +1,21 @@
+From: Dmitry Borodaenko <angdraug@gmail.com>
+Date: Sat, 10 Aug 2013 17:24:26 -0700
+Subject: do not set rpath
+Updated by: Abhijith PA <abhijith@openmailbox.org>
+Date: 23/11/2016
+
+--- a/ext/extconf.rb
++++ b/ext/extconf.rb
+@@ -34,12 +34,6 @@
+ 		libdir = `"#{pgconfig}" --libdir`.chomp
+ 		dir_config 'pg', incdir, libdir
+ 
+-		# Try to use runtime path linker option, even if RbConfig doesn't know about it.
+-		# The rpath option is usually set implicit by dir_config(), but so far not
+-		# on MacOS-X.
+-		if RbConfig::CONFIG["RPATHFLAG"].to_s.empty? && try_link('int main() {return 0;}', " -Wl,-rpath,#{libdir}")
+-			$LDFLAGS << " -Wl,-rpath,#{libdir}"
+-		end
+ 	else
+ 		$stderr.puts "No pg_config... trying anyway. If building fails, please try again with",
+ 			" --with-pg-config=/path/to/pg_config"

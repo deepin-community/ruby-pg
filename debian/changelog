@@ -1,0 +1,493 @@
+ruby-pg (1.2.3-deepin1) unstable; urgency=medium
+
+  * Rebuild
+
+ -- Deepin Packages Builder <packages@deepin.org>  Fri, 11 Nov 2022 18:04:50 +0800
+
+ruby-pg (1.2.3-1) unstable; urgency=medium
+
+  [ Cédric Boutillier ]
+  * Update team name
+  * Add .gitattributes to keep unwanted files out of the source package
+
+  [ Pirate Praveen ]
+  * New upstream version 1.2.3
+
+ -- Pirate Praveen <praveen@debian.org>  Mon, 14 Sep 2020 14:44:21 +0530
+
+ruby-pg (1.2.1-2) unstable; urgency=medium
+
+  [ Utkarsh Gupta ]
+  * Add salsa-ci.yml
+
+  [ Pirate Praveen ]
+  * Bump minimum version of gem2deb to 1.0~
+  * Bump Standards-Version to 4.5.0 (no changes needed)
+  * Reupload to unstable
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 14 Jul 2020 00:18:53 +0530
+
+ruby-pg (1.2.1-1) experimental; urgency=medium
+
+  * Team upload
+
+  [ Utkarsh Gupta ]
+  * Add salsa-ci.yml
+
+  [ Abhijith Sheheer ]
+  * Updated debian/watch
+  * New upstream version 1.2.1
+  * Changed Homepage URL
+  * Added upstream/metadata
+  * Drop compat file, rely on debhelper-compat and bump compat level to 12
+  * Bump Standards-Version to 4.4.1 (no changes needed)
+  * Added Rules-Requires-Root: no
+  * Added a patch to fix privacy issues
+  * Run wrap-and-sort
+
+ -- Abhijith Sheheer <abhijithsheheer@gmail.com>  Mon, 06 Jan 2020 22:03:09 +0530
+
+ruby-pg (1.1.4-1) experimental; urgency=medium
+
+  * Team upload
+  * New upstream version 1.1.4
+  * Add Testsuite for autopkgtest
+
+ -- Utkarsh Gupta <guptautkarsh2102@gmail.com>  Sat, 15 Jun 2019 16:01:55 +0530
+
+ruby-pg (1.1.3-3) unstable; urgency=medium
+
+  * Add version to Breaks: gitlab
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 08 Feb 2019 15:58:14 +0530
+
+ruby-pg (1.1.3-2) unstable; urgency=medium
+
+  * Team upload
+  * Reupload to unstable
+  * Fix minor errors
+  * Add Breaks for gitlab
+
+ -- Utkarsh Gupta <guptautkarsh2102@gmail.com>  Thu, 07 Feb 2019 21:19:53 +0530
+
+ruby-pg (1.1.3-1) experimental; urgency=medium
+
+  * New upstream version 1.1.3
+  * Bump Standards-Version to 4.3.0 (no changes needed)
+  * Drop patch that no longer apply
+  * Stop generating gemspec (it is available already now)
+  * Use salsa.debian.org in Vcs-* fields
+
+ -- Pirate Praveen <praveen@debian.org>  Thu, 27 Dec 2018 19:33:16 +0530
+
+ruby-pg (0.19.0-2) unstable; urgency=medium
+
+  * Reupload to unstable
+  * Bump debhelper compat to 11, standards version to 4.1.3
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 21 Feb 2018 22:19:32 +0530
+
+ruby-pg (0.19.0-1) experimental; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Remove debian/patches/0002-fix-license-gemspec.patch. Fixed in upstream
+  * Refresh Patches.
+
+ -- Abhijith PA <abhijith@openmailbox.org>  Wed, 23 Nov 2016 23:13:09 +0530
+
+ruby-pg (0.18.4-2) unstable; urgency=medium
+
+  * Team upload.
+  * debian/watch: fix URL
+  * debian/patches/0003-reproducible-docs.patch: make build reproducible
+    (Closes: #834541). Thanks to Chris Lamb to the original patch.
+  * Bump Standards-Version to 3.9.8; no changes needed
+
+ -- Antonio Terceiro <terceiro@debian.org>  Mon, 17 Oct 2016 14:36:10 -0200
+
+ruby-pg (0.18.4-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+
+ -- Rahulkrishnan R A <rahulkrishnanfs@gmail.com>  Tue, 15 Mar 2016 15:40:39 +0000
+
+ruby-pg (0.18.3-1) unstable; urgency=medium
+
+  * New upstream release
+  * Remove patch 0003-privacy-breach.patch (already applied)
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 30 Oct 2015 03:12:53 +0530
+
+ruby-pg (0.18.2-1) unstable; urgency=medium
+
+  * New upstream release
+  * Add myself to uploaders
+
+ -- Pirate Praveen <praveen@debian.org>  Sat, 29 Aug 2015 22:18:46 +0530
+
+ruby-pg (0.18.1-2) unstable; urgency=medium
+
+  * Team upload.
+  * Re-upload to unstable.
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 28 Apr 2015 14:48:59 +0530
+
+ruby-pg (0.18.1-1) experimental; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Refresh patches.
+  * Bump standards version to 3.9.6 (no changes).
+  * Remove BSD from copyright (ext/compat.c is removed).
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 03 Apr 2015 20:25:00 +0530
+
+ruby-pg (0.17.1-2) unstable; urgency=medium
+
+  * Team upload.
+  * Generate gemspec from the source instead of copying from an external
+    source (Closes: #758601)
+    - remove obsolete gemspec file in debian/
+    - use upstream Rakefile to generate the gemspecs
+    - add 0002-fix-license-gemspec.patch to provide a correct license in the
+      gemspecs
+  * Build-depend on ruby-hoe and rake-compiler to be able to run rake tasks
+    from the upstream Rakefile
+  * Update the rule to generate the documentation and register it in doc-base
+    - Add 0003-privacy-breach.patch to prevent loading remote uncontrolled
+      data from the HTML documentation
+
+ -- Cédric Boutillier <boutil@debian.org>  Thu, 21 Aug 2014 12:23:45 +0200
+
+ruby-pg (0.17.1-1) unstable; urgency=low
+
+  * New upstream version.
+  * Transitional packages removed (Closes: #735712).
+  * Standards-Version upgraded to 3.9.5 (no changes).
+
+ -- Dmitry Borodaenko <angdraug@debian.org>  Sun, 08 Jun 2014 10:21:17 -0700
+
+ruby-pg (0.17.0-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Dmitry Borodaenko <angdraug@debian.org>  Sun, 06 Oct 2013 01:33:51 -0700
+
+ruby-pg (0.16.0-1) unstable; urgency=low
+
+  [ Dmitry Borodaenko ]
+  * New upstream version.
+  * Standards-Version upgraded to 3.9.3 (no changes).
+  * Do not set RPATH in ext/extconf.rb.
+  * Restore symlink to libjs-jquery that was lost in gem2deb transition.
+
+  [ Cédric Boutillier ]
+  * debian/control: remove obsolete DM-Upload-Allowed flag.
+  * use canonical URI in Vcs-* fields.
+  * debian/copyright: use DEP5 copyright-format/1.0 official URL for Format
+    field.
+
+ -- Dmitry Borodaenko <angdraug@debian.org>  Sat, 10 Aug 2013 16:38:28 -0700
+
+ruby-pg (0.14.0-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Dmitry Borodaenko <angdraug@debian.org>  Sun, 15 Jul 2012 15:05:58 +0300
+
+ruby-pg (0.13.2-2) unstable; urgency=low
+
+  * Add gemspec from rubygems.org
+  * Team upload.
+  * Bump build dependency on gem2deb to >= 0.3.0~.
+
+ -- Antonio Terceiro <terceiro@debian.org>  Sat, 30 Jun 2012 08:48:56 -0300
+
+ruby-pg (0.13.2-1) unstable; urgency=low
+
+  * New upstream version.
+  * Standards-Version upgraded to 3.9.3.
+
+ -- Dmitry Borodaenko <angdraug@debian.org>  Sat, 03 Mar 2012 15:28:05 +0300
+
+ruby-pg (0.13.1-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Dmitry Borodaenko <angdraug@debian.org>  Mon, 20 Feb 2012 21:37:02 +0300
+
+ruby-pg (0.12.2-1) unstable; urgency=low
+
+  * New upstream version.
+  * Point Vcs-* control fields at git.debian.org.
+
+ -- Dmitry Borodaenko <angdraug@debian.org>  Sun, 08 Jan 2012 19:16:32 +0300
+
+ruby-pg (0.12.0-1) unstable; urgency=low
+
+  * New upstream version.
+  * Priority of transitional packages downgraded to extra.
+
+ -- Dmitry Borodaenko <angdraug@debian.org>  Sat, 24 Dec 2011 16:49:23 +0300
+
+ruby-pg (0.11.0+gem2deb-1) unstable; urgency=low
+
+  * Switch to gem2deb-based packaging:
+    - source and binary packages renamed to ruby-pg
+    - transitional packages added
+    - source format changed to 3.0 (quilt).
+
+ -- Dmitry Borodaenko <angdraug@debian.org>  Thu, 08 Sep 2011 00:14:24 +0300
+
+libpgsql-ruby (0.11.0-1) unstable; urgency=low
+
+  * New upstream snapshot:
+    - resolves a segmentation fault bug when using Rails with
+      PostgreSQL 9, closes: #624106.
+  * Updated changelog from the upstream hg repository.
+  * Standards-Version upgraded to 3.9.2.
+
+ -- Dmitry Borodaenko <angdraug@debian.org>  Sat, 04 Jun 2011 17:39:26 +0300
+
+libpgsql-ruby (0.9.1~hg20100928-1) unstable; urgency=low
+
+  * New upstream snapshot:
+    - includes compatibility fixes for Ruby 1.9.2, JRuby, PostgreSQL 9.0
+    - pg.so is renamed to pg_ext.so and loaded from pg.rb
+    - get_notify works since 0.8.0, closes: #307902.
+  * Upstream moved to bitbucket.org:
+    - updated debian/watch and Homepage
+    - added Vcs-Browser and Vcs-Hg.
+  * Updated debian/copyright to include PostgreSQL BSD license, brought
+    authors list in sync with upstream README, updated upstream URL.
+  * Created missing changelog from the upstream hg repository.
+  * Replaced rdoc's jquery with a symlink, added Depends on libjs-jquery to
+    libpgsql-ruby-doc.
+  * Standards-Version upgraded to 3.9.1.
+
+ -- Dmitry Borodaenko <angdraug@debian.org>  Fri, 01 Oct 2010 01:54:33 +0300
+
+libpgsql-ruby (0.8.0-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Switch from Ruby 1.9 to 1.9.1. Closes: #565832.
+
+ -- Lucas Nussbaum <lucas@lucas-nussbaum.net>  Sat, 13 Feb 2010 09:52:11 +0100
+
+libpgsql-ruby (0.8.0-1) unstable; urgency=low
+
+  * New upstream version
+  * Changed Section from interpreters to ruby.
+  * Debhelper compat level upgraded to 5.
+  * Standards-Version upgraded to 3.8.1.
+
+ -- Dmitry Borodaenko <angdraug@debian.org>  Thu, 09 Apr 2009 14:11:24 +0300
+
+libpgsql-ruby (0.7.9.2008.10.13-2) unstable; urgency=low
+
+  * Upload to unstable (Closes: #405420).
+
+ -- Dmitry Borodaenko <angdraug@debian.org>  Sat, 21 Feb 2009 12:31:59 +0200
+
+libpgsql-ruby (0.7.9.2008.10.13-1) experimental; urgency=low
+
+  * New upstream version.
+
+ -- Dmitry Borodaenko <angdraug@debian.org>  Sun, 26 Oct 2008 15:08:47 +0200
+
+libpgsql-ruby (0.7.9.2008.08.17-1) experimental; urgency=low
+
+  * New upstream version.
+  * Build a module for Ruby 1.9 in libpgsql-ruby1.9.
+  * Added build-depends on ruby1.9, ruby1.9-dev, rdoc1.9.
+  * Replaced dpatch with quilt.
+
+ -- Dmitry Borodaenko <angdraug@debian.org>  Sun, 28 Sep 2008 18:46:56 +0300
+
+libpgsql-ruby (0.7.9.2008.03.18-2) unstable; urgency=low
+
+  * Generate RDoc documentation (Closes: #476448).
+  * Split documentation into libpgsql-ruby-doc package.
+  * Updated to Standards-Version 3.8.0:
+    - Homepage: field added to control file
+    - README.source added.
+
+ -- Dmitry Borodaenko <angdraug@debian.org>  Sun, 29 Jun 2008 18:41:22 +0300
+
+libpgsql-ruby (0.7.9.2008.03.18-1) unstable; urgency=low
+
+  * New maintainer.
+  * Switched upstream source from ruby-postgres to ruby-pg (Closes: #474748).
+  * Bumped standards version to 3.7.3.
+
+ -- Dmitry Borodaenko <angdraug@debian.org>  Thu, 10 Apr 2008 01:28:50 +0300
+
+libpgsql-ruby (0.7.1-10) unstable; urgency=low
+
+  * Add dpatch support.
+  * Dummy package is now architecture all.
+  * Rework debian/rules.
+  * Conform to policy by using "-O2 -g -Wall" as CFLAGS.
+  * Include pg_encoding_to_char() declaration from pg_wchar.h which
+    is not included directly, because it makes libpgsql-ruby FTBFS
+    due to a non-existing bool type. (Closes: #318858)
+
+ -- Aurélien GÉRÔME <ag@roxor.cx>  Mon, 16 Oct 2006 00:28:58 +0200
+
+libpgsql-ruby (0.7.1-9) unstable; urgency=low
+
+  * Adopt the package (closes: 379991).
+  * Remove libpgsql-ruby1.6 leftovers.
+  * Remove watch file, because evenif the URL exists, uscan cannot
+    get it.
+
+ -- Aurélien GÉRÔME <ag@roxor.cx>  Sat, 29 Jul 2006 00:09:28 +0200
+
+libpgsql-ruby (0.7.1-8) unstable; urgency=low
+
+  * Orphan package
+    - Change maintainer to Debian QA Group <packages@qa.debian.org>
+  * Remove package for ruby1.6
+    (closes: #366577)
+
+ -- Taku YASUI <tach@debian.or.jp>  Sun, 15 Jan 2006 23:48:53 +0900
+
+libpgsql-ruby (0.7.1-7) unstable; urgency=low
+
+  * debian/rules: Determine correct PostgreSQL includes using pg_config
+    (closes: #335972)
+  * Add debian/compat file and remove DH_COMPAT line from debian/rules
+
+ -- Taku YASUI <tach@debian.or.jp>  Sun, 15 Jan 2006 23:47:26 +0900
+
+libpgsql-ruby (0.7.1-6) unstable; urgency=low
+
+  * Followup-to new standard version: 3.6.2.1
+  * Fix depends/suggests duplication
+
+ -- Taku YASUI <tach@debian.or.jp>  Mon, 18 Jul 2005 06:52:44 +0900
+
+libpgsql-ruby (0.7.1-5) unstable; urgency=low
+
+  * Change Upstream Maintainer to Dave Lee <dave@cherryville.org>
+
+ -- Taku YASUI <tach@debian.or.jp>  Mon, 18 Jul 2005 06:50:53 +0900
+
+libpgsql-ruby (0.7.1-4) unstable; urgency=low
+
+  * Rebuild for posgres 8.0
+
+ -- Taku YASUI <tach@debian.or.jp>  Mon, 18 Jul 2005 06:41:07 +0900
+
+libpgsql-ruby (0.7.1-3) unstable; urgency=low
+
+  * Make compliant with new Debian Ruby Policy
+
+ -- Taku YASUI <tach@debian.or.jp>  Sun, 21 Sep 2003 00:55:48 +0900
+
+libpgsql-ruby (0.7.1-2) unstable; urgency=low
+
+  * Change debian/watch file
+  * Make compliant with Debian Ruby Policy
+  * Write more details to long description
+    (closes: #209589)
+
+ -- Taku YASUI <tach@debian.or.jp>  Wed, 10 Sep 2003 19:53:39 +0900
+
+libpgsql-ruby (0.7.1-1) unstable; urgency=low
+
+  * New upstream release
+  * Rebuild with postgresql 7.3.1
+    (closes: #176816)
+
+ -- Taku YASUI <tach@debian.or.jp>  Wed, 15 Jan 2003 23:09:19 +0900
+
+libpgsql-ruby (0.7.0-pre2-4) unstable; urgency=low
+
+  * Re-package for new ruby release.
+
+ -- Taku YASUI <tach@debian.or.jp>  Fri, 27 Dec 2002 12:01:21 +0900
+
+libpgsql-ruby (0.7.0-pre2-3) unstable; urgency=low
+
+  * Fix: get_notify doesn't get relname properly (closes: #163779)
+
+ -- Taku YASUI <tach@debian.or.jp>  Thu, 10 Oct 2002 13:13:26 +0900
+
+libpgsql-ruby (0.7.0-pre2-2) unstable; urgency=low
+
+  * Add debian/watch file
+  * Change upstream download URL
+
+ -- Taku YASUI <tach@debian.or.jp>  Tue,  3 Sep 2002 05:20:40 +0900
+
+libpgsql-ruby (0.7.0-pre2-1) unstable; urgency=low
+
+  * New upstream release
+  * Moved from non-US to main
+
+ -- Taku YASUI <tach@debian.or.jp>  Tue,  3 Sep 2002 04:43:19 +0900
+
+libpgsql-ruby (0.6.5-3) unstable; urgency=low
+
+  * Maintainer Release.
+
+ -- Taku YASUI <tach@debian.or.jp>  Fri, 12 Apr 2002 02:28:47 +0900
+
+libpgsql-ruby (0.6.5-2.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Tighten ruby build-dependencies (closes: #141689).
+  * Similarly, tighten build-dependency on postgresql-dev for the libpgsql2
+    transition.
+
+ -- Colin Watson <cjwatson@debian.org>  Thu, 11 Apr 2002 13:01:26 +0100
+
+libpgsql-ruby (0.6.5-2) unstable; urgency=low
+
+  * recompile for new version of ruby and libpgsql.
+    (closes: #136504, #136507)
+
+ -- Taku YASUI <tach@debian.or.jp>  Thu,  7 Mar 2002 03:03:53 +0900
+
+libpgsql-ruby (0.6.5-1) unstable; urgency=low
+
+  * New upstream release
+  * recompile for new version of ruby.
+    (closes: #126597)
+
+ -- Taku YASUI <tach@debian.or.jp>  Fri, 28 Dec 2001 01:31:25 +0900
+
+libpgsql-ruby (0.6.4-3) unstable; urgency=low
+
+  * recompile for new version of ruby.
+    (closes: #112882)
+
+ -- Taku YASUI <tach@debian.or.jp>  Thu, 20 Sep 2001 22:41:42 +0900
+
+libpgsql-ruby (0.6.4-2) unstable; urgency=low
+
+  * Re-package for new postgres release.
+  * Depends on same version of libruby.
+
+ -- Taku YASUI <tach@debian.or.jp>  Sun, 22 Jul 2001 16:56:36 +0900
+
+libpgsql-ruby (0.6.4-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Taku YASUI <tach@debian.or.jp>  Thu, 17 May 2001 12:38:01 +0900
+
+libpgsql-ruby (0.6.2-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Taku YASUI <tach@debian.or.jp>  Fri,  9 Feb 2001 01:30:37 +0900
+
+libpgsql-ruby (0.6.1-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Taku YASUI <tach@debian.or.jp>  Thu,  1 Feb 2001 19:33:32 +0900

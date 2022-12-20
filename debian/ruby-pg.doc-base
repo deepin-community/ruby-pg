@@ -1,0 +1,10 @@
+Document: ruby-pg
+Title: pg: The Ruby Interface to PostgreSQL
+Author: Michael Granger
+Abstract: Pg is the Ruby interface to the PostgreSQL RDBMS.
+ This API documentation is generated from the source with RDoc.
+Section: Programming/Ruby
+
+Format: HTML
+Index: /usr/share/doc/ruby-pg/rdoc/index.html
+Files: /usr/share/doc/ruby-pg/rdoc/*
